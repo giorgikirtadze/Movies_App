@@ -1,8 +1,15 @@
 import React from 'react'
 import Stylee from './app.module.css'
+import { useNavigate } from 'react-router-dom'
+
 const MovieCard = ({movie:  {imdbID, Year, Poster, Title, Type }}) => {
+    const navigate = useNavigate();
+    const handleNavigate = (patch) => {
+      navigate(patch);
+    };
+
   return (
-<div className={Stylee.movie} key={imdbID}>
+    <div className={Stylee.movie} key={imdbID}>
       <div>
         <p>{Year}</p>
       </div>
@@ -14,9 +21,8 @@ const MovieCard = ({movie:  {imdbID, Year, Poster, Title, Type }}) => {
 
       <div>
         <span>{Type}</span>
-        <h3>{Title}</h3>
+        <h3 onClick={() => handleNavigate(`/MovieWatchCard/${imdbID}`)}>{Title}</h3>
       </div>
     </div>  )
 }
-
 export default MovieCard;

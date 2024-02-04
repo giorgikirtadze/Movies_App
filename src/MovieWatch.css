@@ -1,0 +1,33 @@
+.retutnBackIcon {
+    font-size: 60px;
+    color: white;
+    padding: 10px 0px 20px 20px;
+    cursor: pointer;
+}
+.concretFilmContainer {
+    display: flex;
+}
+
+
+.imgContainer {
+    width: 50%;
+    border: 1px solid;
+}
+.imgContainer img{
+    width: 100%;
+    height: 91vh;
+}
+.filmContainerInfo {
+    width: 50%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center; */
+    justify-content: center;
+    /* align-items: center; */
+}
+.actors,
+.plot {
+    font-size: 16px;
+}
